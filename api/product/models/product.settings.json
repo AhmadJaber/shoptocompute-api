@@ -1,0 +1,80 @@
+{
+  "kind": "collectionType",
+  "collectionName": "products",
+  "info": {
+    "name": "product",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "price": {
+      "type": "decimal"
+    },
+    "quantitiy": {
+      "type": "integer"
+    },
+    "featured": {
+      "type": "boolean"
+    },
+    "discription": {
+      "type": "richtext",
+      "required": true
+    },
+    "processor": {
+      "type": "string"
+    },
+    "graphics": {
+      "type": "string"
+    },
+    "os": {
+      "type": "string"
+    },
+    "display": {
+      "type": "string"
+    },
+    "storage": {
+      "type": "string"
+    },
+    "memory": {
+      "type": "string"
+    },
+    "keyboard": {
+      "type": "string"
+    },
+    "battery": {
+      "type": "string"
+    },
+    "adapter": {
+      "type": "string"
+    },
+    "touchpad": {
+      "type": "string"
+    },
+    "slogan": {
+      "type": "string"
+    },
+    "product_id": {
+      "type": "string"
+    },
+    "images": {
+      "collection": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false
+    }
+  }
+}
